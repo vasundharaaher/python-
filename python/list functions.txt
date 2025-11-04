@@ -1,0 +1,486 @@
+
+There are two types of objects:
+	- mutable objects
+	- immutable objects
+
+* The mutable objects:
+	- multiple mutable objects having same values,
+ 	will have different ID (location)
+	- mutable objects allows changes in itself.
+
+* The immutable objects:
+	- multiple immutable objects having same values,
+ 	will have same ID (location)
+	- immutable objects does not allows changes in
+ 	itself. It always returns new object having answer.
+
+===============================================
+
+---- List ----
+* every list that we declare, are actually objects of 
+	class "list"
+* is dynamic and mutable entity.
+* allows indexing and indexing operator []
+* allows over-writing of elements via index-number
+* maintains order of elements
+* allows duplicate elements
+* allows every Python object as element.
+
+======================================
+
+1) append():
+This function appends specified parameter in invoking 
+list object. 
+For example:
+--------------
+a = [10,20,"ABCD"]
+print("Initially ", a)
+
+a.append(55.66)   <--- appends 55.66 in 'a'
+print("Updated ", a)
+
+a.append("XYZ")   <---- appends "XYZ" in 'a'
+print("Updated ", a)
+
+Output will be:
+-----------------
+Initially  [10, 20, 'ABCD']
+Updated  [10, 20, 'ABCD', 55.66]
+Updated  [10, 20, 'ABCD', 55.66, 'XYZ']
+
+* This append() method has exact one formal parameter. 
+Therefore we can pass exact one actual parameter.
+For example:
+-------------
+a = [10,20,"ABCD"]
+print("Initially ", a)
+
+a.append(55.66, "XYZ")   <--- shows Error
+print("Updated ", a)
+
+* This append() method takes exact one parameter/argument,
+Therfore we can also give another sequence/iterable as 
+paraemter.
+
+For example:
+-------------
+a = [10,20,"ABCD"]
+print("Initially ", a)
+
+a.append(55.66)
+print("Updated ", a)
+
+a.append(["XYZ", "PQR", 500])   <--- appends entire list
+print("Updated ", a)
+
+The output will be:
+--------------------
+Initially  [10, 20, 'ABCD']
+Updated  [10, 20, 'ABCD', 55.66]
+Updated  [10, 20, 'ABCD', 55.66, ['XYZ', 'PQR', 500]]
+
+=================================
+
+2) extend():
+* This function requires a sequence/iterable as 
+parameter.
+* This function appends every element of specified 
+sequence into invoking list object.
+For example:
+-------------
+b = [55,66,"XYZ"]
+a = [10,20,"ABCD"]
+print("Initially ", a)
+
+a.extend(b)  <--- appends elements of 'b' into 'a'
+print("Updated ", a)
+
+The output will be:
+--------------------
+Initially  [10, 20, 'ABCD']
+Updated  [10, 20, 'ABCD', 55, 66, 'XYZ']
+
+* A String is also a sequence/iterable, therefore we 
+can also provide a String as parameter to extend().
+This will append each character of String into invoking 
+list object. 
+
+For example:
+-------------
+a = [10,20,"ABCD"]
+print("Initially ", a)
+
+a.extend("XYZ")  <--- appends characters of "XYZ" in 'a'
+print("Updated ", a)
+
+The output will be:
+--------------------
+Initially  [10, 20, 'ABCD']
+Updated  [10, 20, 'ABCD', 'X', 'Y', 'Z']
+
+=================================================
+
+3) clear():
+* This function clears all elements of invoking list 
+object. And ultimately length of list becomes 0.
+
+For example:
+-------------
+a = [10,20,30,40,50,60,70]
+print("Initially ", a)
+
+a.clear()  <--- clears all elements of 'a'
+print("Updated ", a)
+
+The output will be:
+--------------------
+Initially  [10, 20, 30, 40, 50, 60, 70]
+Updated  []
+
+========================================
+
+4) copy():
+* This function creates and returns a new copy of 
+invoking list object.
+For example:
+-------------
+a = [10,20,30,40,50,60,70]
+print("Initially ", a)
+
+b = a.copy()  <--- will create copy of 'a' and returns in 'b'
+print("Copied ", b)
+
+print("ID of a ", id(a))
+print("ID of b ", id(b))
+
+The output will be:
+--------------------
+Initially  [10, 20, 30, 40, 50, 60, 70]
+Copied  [10, 20, 30, 40, 50, 60, 70]
+ID of a  36179528
+ID of b  36178248
+
+* From IDs we can say, these objects have different 
+instances. 
+
+========================================
+
+5) insert():
+* This function requires two parameters. First is index 
+number and second is object/value.
+* This function inserts specified object/value at 
+specified index-number in invoking list object.
+
+For example:
+--------------
+a = [10,20, 45.66, "ABCD"]
+print("Initially ", a)
+
+a.insert(1, "XYZ")  <--- will insert "xyz" at index[1]
+print("Updated ", a)
+
+The output will be:
+--------------------
+Initially  [10, 20, 45.66, 'ABCD']
+Updated  [10, 'XYZ', 20, 45.66, 'ABCD']
+
+* We can also insert another sequence/iterable into 
+invoking list object. 
+
+For example:
+-------------
+a = [10,20, 45.66, "ABCD"]
+print("Initially ", a)
+
+a.insert(1, [55,65,"XYZ"])  <--- will insert list at index[1]
+print("Updated ", a)
+
+The output will be:
+--------------------
+Initially  [10, 20, 45.66, 'ABCD']
+Updated  [10, [55, 65, 'XYZ'], 20, 45.66, 'ABCD']
+
+=================================================
+
+6) pop():
+* This function pops-out the element present at specified 
+index-number in invoking list object. 
+* This function also returns that popped element.
+
+For example:
+-------------
+a = [10, 20, 45.66, "ABCD"]
+print("Initially ", a)
+
+b = a.pop(1)  <--- pops the element at index[1]
+print("Updated ", a)
+print(b)
+
+The output will be:
+--------------------
+Initially  [10, 20, 45.66, 'ABCD']
+Updated  [10, 45.66, 'ABCD']
+20
+
+* Specifying index-number is optional. If index-number 
+is not provided as parameter, then by-default it behaves 
+as Stack. And last element gets popped-out. 
+
+For example:
+-------------
+a = [10, 20, 45.66, "ABCD"]
+print("Initially ", a)
+
+b = a.pop()  <--- pops-out last element "ABCD"
+print("Updated ", a)
+print(b)
+
+The output will be:
+--------------------
+Initially  [10, 20, 45.66, 'ABCD']
+Updated  [10, 20, 45.66]
+ABCD
+
+* This function also allows negative indexing.
+* If any invalid index-number is provided, then this 
+functions show IndexError.
+
+For example:
+-------------
+a = [10, 20, 45.66, "ABCD"]
+print("Initially ", a)
+
+b = a.pop(35)  <--- index [35] is invalid.
+print("Updated ", a)
+print(b)
+
+Error will be:
+----------------
+IndexError: pop index out of range
+
+==================================================
+
+7. remove():
+* This function requires an element as parameter. 
+* This function removes specified element from invoking 
+list object. 
+
+For example:
+-------------
+a = [10, 20, 45.66, "ABCD"]
+print("Initially ", a)
+
+a.remove(45.66)  <--- removes 45.66 from list 'a'
+print("Updated ", a)
+
+* This function strictly requires element to remove. 
+* It will not by-default remove any element. 
+
+* If specified element to remove is having multiple 
+occurrance, then this function removes only first 
+occurrance of that element. 
+
+For example:
+-------------
+a = [65, 10, 20, 10, 45.66, "ABCD"]
+print("Initially ", a)
+
+a.remove(10)  <--- remove fist 10 from list 'a'
+print("Updated ", a)
+
+The output will be:
+--------------------
+Initially  [65, 10, 20, 10, 45.66, 'ABCD']
+Updated  [65, 20, 10, 45.66, 'ABCD']
+
+* If specified element is not present in invoking list 
+object, then this functions shows ValueError.
+
+For example:
+-------------
+a = [65, 10, 20, 10, 45.66, "ABCD"]
+print("Initially ", a)
+
+a.remove(55)  <--- element 55 is not in list 'a'
+print("Updated ", a)
+
+The Error will be:
+--------------------
+ValueError: list.remove(x): x not in list
+
+================================================
+
+8. reverse():
+* This function reverses elements of invoking list object.
+
+For example:
+-------------
+a = [65, 10, 20, 10, 45.66, "ABCD"]
+print("Initially ", a)
+
+a.reverse()  <--- reverses invoking list 'a'
+print("Updated ", a)
+
+The output will be:
+--------------------
+Initially  [65, 10, 20, 10, 45.66, 'ABCD']
+Updated  ['ABCD', 45.66, 10, 20, 10, 65]
+
+=================================================
+
+9. sort():
+* This functions sorts the elements of invoking 
+list object. 
+* This function by-default sorts in ASC order.
+
+For example:
+-------------
+a = [65, 10, 20, 10, 45.66]
+print("Initially ", a)
+
+a.sort()
+print("Updated ", a)
+
+The output will be:
+--------------------
+Initially  [65, 10, 20, 10, 45.66]
+Updated  [10, 10, 20, 45.66, 65]
+
+* This function also sorts String type elements. 
+For example:
+-------------
+a = ["Vishal", "Vishwesh", "Param", "Pratik", "Bhavesh", "Mahesh"]
+print("Initially ", a)
+
+a.sort()
+print("Updated ", a)
+
+The output will be:
+--------------------
+Initially  ['Vishal', 'Vishwesh', 'Param', 'Pratik', 'Bhavesh', 'Mahesh']
+Updated  ['Bhavesh', 'Mahesh', 'Param', 'Pratik', 'Vishal', 'Vishwesh']
+
+* The only condition is, all elements must be either 
+numberics or all must be String. 
+
+* This function by-default sorts in ASC order. To make 
+it sort into DESC order, use attribute "reverse=True"
+
+For example:
+-------------
+a = ["Vishal", "Vishwesh", "Param", "Pratik", "Bhavesh", "Mahesh"]
+print("Initially ", a)
+
+a.sort(reverse=True)   <--- sorts in ASC order, then reverses
+print("Updated ", a)
+
+The output will be:
+--------------------
+Initially  ['Vishal', 'Vishwesh', 'Param', 'Pratik', 'Bhavesh', 'Mahesh']
+Updated  ['Vishwesh', 'Vishal', 'Pratik', 'Param', 'Mahesh', 'Bhavesh']
+
+==============================================
+
+10)  count():
+* This function returns occurrance count of speicifed 
+element in invoking list object. 
+
+For example:
+-------------
+a = [10,20,30, "ABCD", 20]
+print("Initially ", a)
+
+b = a.count(20)  <--- obtains count of 20 in list 'a'
+print(b)
+
+The output will be:
+--------------------
+Initially  [10, 20, 30, 'ABCD', 20]
+2
+
+* If specified element is not present, then returns 0. 
+Because that element appeared 0 times.
+
+============================================
+
+11) index():
+* This function returns index-number of specified 
+element in invoking list object.
+
+For example:
+-------------
+a = [10,20,30, "ABCD"]
+print("Initially ", a)
+
+b = a.index(20)  <--- obtains index-number of 20 in list 'a'
+print(b)
+
+The output will be:
+--------------------
+Initially  [10, 20, 30, 'ABCD']
+1
+
+* If that element has multiple occurrance, then this 
+function returns index-number of first occurrance. 
+
+For example:
+-------------
+a = [10, 20, 30, "ABCD", 20]
+print("Initially ", a)
+
+b = a.index(20)  
+# obtains index-number of first occurrance of 20 in list 'a'
+print(b)
+
+The output will be:
+--------------------
+Initially  [10, 20, 30, 'ABCD']
+1
+
+* If specified element is not present in invoking list 
+object, then this function shows ValueError.
+
+For example:
+-------------
+a = [10, 20, 30, "ABCD", 20]
+print("Initially ", a)
+
+b = a.index(25)  <--- shows Error  
+print(b)
+
+The Error will be:
+-------------------
+ValueError: 25 is not in list
+
+* If logically required, then we can also specify the 
+range of element to search for indexing. 
+* This function additionally has 2 more optional parameters.
+	- start index
+	- end index
+* The defualt value of start-index is 0
+* The default value of end-index is len(x)
+
+For example:
+-------------
+a = [10, 20, 30, "ABCD", 20]
+print("Initially ", a)
+
+b = a.index(20, 2)
+# obtains index-number of 20 after index[2]
+print(b)
+
+The output will be:
+--------------------
+Initially  [10, 20, 30, 'ABCD', 20]
+4
+
+================================================
+
+
+
+
+
+
+
+
+

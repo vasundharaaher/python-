@@ -1,0 +1,88 @@
+
+* A GUI project/application consists of multiple Frames/Forms/Base/Windows.
+* A website is set of webpages.
+
+
+* To implement GUI applications, we have following steps:
+
+step 1: import tkinter library
+
+step 2: Obtain a base (is an output window in which we place the components/widgets)
+
+step 3: Declare required component objects with reqruied constructor's parameters.
+
+step 4: Add the component objects/widgets into base by using pack() or place() or grid()
+
+step 5: make the base visible by adding it into mainloop.
+
+==========================================================================
+
+from tkinter import *
+
+base = Tk()
+base.geometry("300x400")   # to set dimension of base
+base.title("Login Frame")
+
+f = ("Arial Bold", 16)
+f2 = ("Comic Sans MS", 17)
+
+btn1 = Button(base, text="Submit", font=f)
+btn1.pack()
+
+btn2 = Button(base, text="Clear", font=f)
+btn2.pack()
+
+txt1 = Entry(base, font=f2)
+txt1.pack()
+
+base.mainloop()
+
+=================================================================================
+
+from tkinter import *
+
+base = Tk()
+base.geometry("300x400")   # to set dimension of base
+base.title("Login Frame")
+
+f = ("Arial Bold", 16)
+f2 = ("Comic Sans MS", 17)
+
+btn1 = Button(base, text="Submit", font=f, bg="yellow", fg="blue")
+btn1.pack()
+
+btn2 = Button(base, text="Clear", font=f, background="red")
+btn2.pack()
+
+txt1 = Entry(base, font=f2)
+txt1.pack()
+
+base.mainloop()
+
+=========================================================================================
+
+from tkinter import *
+
+base = Tk()
+base.geometry("300x400")   # to set dimension of base
+base.title("Login Frame")
+
+f = ("Arial Bold", 16)
+f2 = ("Comic Sans MS", 17)
+
+btn1 = Button(base, text="Submit", font=f, bg="yellow", fg="blue")
+btn1.pack()
+
+btn2 = Button(base, text="Clear", font=f, background="red")
+btn2.pack()
+
+txt1 = Entry(base, font=f2)
+txt1.pack()
+
+txt2 = Entry(base, font=f2, show="*")
+txt2.pack()
+
+base.mainloop()
+
+===========================================================================================
+

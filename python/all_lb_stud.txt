@@ -1,0 +1,6 @@
+1234,vasu aher,vaaher@gmail.com,9858678921,ty
+4545,tushar misal,misal@gmail.com,9858964718,ty
+2323,sakshi tilkari,tsakshi@gmail.com,458769758,sy
+1212,hemant joshi,joshi@gmail.com,4589612,fy
+8989,vishal kambale,vishalk@gmail.com,658975486,sy
+7040,pradeep dev,dev@gmail.com,7040106353,M-tech

@@ -1,0 +1,42 @@
+1) casefold():
+* this fun will return all upper case alphbit into lower case 
+* it will not change involking objrct
+==================
+For an ex:
+str1='RESTART'
+str2=str1.casefold()
+print(str2)
+print(str1)
+============
+output:
+restart
+RESTART
+=============
+2) capitalize():
+* this fun will return first letter of string in upper case and remaiming will be in lower case
+* it will not work on numeric values 
+==================
+For an ex:
+str1='RES99ART'
+str2=str1.capitalize()
+print(str2)
+print(str1)
+==========
+output :
+Res99art
+RES99ART
+============
+3)find() : 
+* this fun will return the index no of an element ( first time occur )
+For an ex:
+str1='3ES99ART'
+str2=str1.find('R')
+print(str2)
+print(str1)
+=============
+output :
+6
+3ES99ART
+=========
+4) 
+

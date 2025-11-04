@@ -1,0 +1,52 @@
+
+step 1: import tkinter library
+		(from import)
+
+step 2: declare object of Tk() as base.
+
+step 3: Declare required objects of components with required constructor parameters.
+
+step 4: add component objects in base by pack() or place() or grid()
+
+step 5: add base into main-loop (so that it becomes visible)
+
+==============================
+
+* To add component object in base, there are 3 methods:
+
+1) pack() -- this is simple function to directly add component into center of screen.
+		(this is like flow-layout)
+
+2) place() -- this is to place the component object specified x-y location. 
+		this function requires two parameters (x= , y= )
+
+3) grid() -- this is to divide the base into matrix (rows and columns)
+		(this function requires two paraemters (rows= , column= )
+
+====================================================================================
+
+from tkinter import *
+
+base = Tk()
+base.geometry("300x400")
+base.title("Login Frame")
+
+f = ("Arial Bold", 16)
+f2 = ("Comic Sans MS", 17)
+f3 = ("Times New Roman", 25)
+
+btn1 = Button(base, text="Submit", font=f, bg="yellow", fg="blue")
+btn1.grid(row=0, column=0)
+
+btn2 = Button(base, text="Reset", font=f, bg="blue", fg="green")
+btn2.grid(row=0, column=1)
+
+btn3 = Button(base, text="Signin", font=f, bg="cyan", fg="black")
+btn3.grid(row=1, column=0)
+
+btn4 = Button(base, text="Copy", font=f, bg="cyan", fg="black")
+btn4.grid(row=1, column=2)
+
+base.mainloop()
+
+=============================================================

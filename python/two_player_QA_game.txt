@@ -1,0 +1,104 @@
+import random
+
+ls = ["+", "-", "*", "**", ">", "<", "==", "!="]
+
+while True:
+    j = 1
+    score = 0
+    score1 = 0
+    i = 1
+    a = random.randint(1, 6)
+    b = random.randint(1, 6)
+    while i <= 5:
+        op = random.choice(ls)
+        print("Enter your Ans Player 1 ")
+        print(a, op, b, "= ?? ")
+        ans = input()
+        r_ans = eval(str(a) + str(op) + str(b))
+        # .... this part is for integer
+        if (op == ls[0]) or (op == ls[1]) or (op == ls[2]) or (op == ls[3]):
+
+            f_ans = int(ans)
+
+            if r_ans == f_ans:
+                score = score + 1
+                print("Now, your score", score)
+            else:
+                print("incorrect  Ans correct Ans is ", r_ans)
+                print("your final score", score)
+                break
+        # ...this part is for condition
+        if op == ls[5] or op == ls[6] or op == ls[7] or op == ls[4]:
+            # .. true
+            if ans == "t":
+                fb_ans = True
+                if r_ans and fb_ans:
+                    score = score + 1
+                    print("Now, your score : ", score)
+                else:
+                    print("incorrect Ans correct Ans is ", r_ans)
+                    print("your final score", score)
+                    break
+            # .. false
+            if ans == "f":
+                fb_ans = False
+                if r_ans == fb_ans:
+                    score = score + 1
+                    print("Now, your score ", score)
+                else:
+                    print("incorrect Ans correct Ans is ", r_ans)
+                    print("your final score", score)
+                    break
+        i = i + 1
+
+    p = random.randint(1, 6)
+    q = random.randint(1, 6)
+    while j <= 5:
+        op1 = random.choice(ls)
+        print("Enter your Ans , Player 2  : ")
+        print(p, op1, q, " = ?? ")
+        ans1 = input()
+        r_ans1 = eval(str(p) + str(op1) + str(q))
+        # .... this part is for integer
+        if (op1 == ls[0]) or (op1 == ls[1]) or (op1 == ls[2]) or (op1 == ls[3]):
+            f1_ans1 = int(ans1)
+            if r_ans1 == f1_ans1:
+                score1 = score1 + 1
+                print("Now, your score  ", score1)
+            else:
+                print("incorrect  Ans correct Ans is ", r_ans1)
+                print("your final score", score1)
+                break
+        # ...this part is for condition
+        if op1 == ls[5] or op1 == ls[6] or op1 == ls[7] or op1 == ls[4]:
+            # .. true
+            if ans1 == "t":
+                fb1_ans1 = True
+                if r_ans1 and fb1_ans1:
+                    score1 = score1 + 1
+                    print("Now, your score ", score1)
+                else:
+                    print("incorrect Ans correct Ans is ", r_ans1)
+                    print("your final score", score1)
+                    break
+            # ..false
+            if ans1 == "f":
+                fb1_ans1 = False
+                if r_ans1 == fb1_ans1:
+                    score1 = score1 + 1
+                    print("Now, your score  ", score1)
+                else:
+                    print("incorrect Ans correct Ans is ", r_ans1)
+                    print("your final score", score1)
+                    break
+        j = j + 1
+    if score > score1:
+        print("Player 1 win....")
+        # break
+    if score1 > score:
+        print("Player 2 win....")
+        # break
+    if score == score1:
+        print("Match Draw")
+        # break
+    print()
