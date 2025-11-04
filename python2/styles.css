@@ -1,0 +1,53 @@
+/* Style for the paragraph */
+.styled-paragraph {
+    font-size: 16px;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    line-height: 1.5;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    background-image: url('123.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.styled-paragraph::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: -1;
+    border-radius: 5px; /* Match the border radius of the paragraph */
+}
+
+/* Style for the table */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px;
+    border: 1px solid #d38484;
+}
+
+.styled-table th {
+    background-color: #7bcc49;
+}
+
+
+.styled-table tr {
+    background-color: #a6ecf3;
+}
