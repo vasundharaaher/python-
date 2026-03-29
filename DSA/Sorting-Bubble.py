@@ -17,57 +17,20 @@ sorted_list = buble_sort(unsorted_list)
 print("Sorteed Elements : ",sorted_list)
 
 """
+
 ##########################################
 
-""" Selection Sort 
-1) In each pass we see the arraay and select the minimum, we swap that to the right position.
-"""
-"""
-def Selection_Sort(arr):
-    n = len(arr)
-    
-    for j in range(n-1):
-        min_index = j
-
-        for i in range(j+1,n):
-
-            if arr[min_index] > arr[i]:
-                min_index = i
-
-        arr[j], arr[min_index] = arr[min_index], arr[j]
-
-    return arr
-
-
-unsorted_list = [12,25,11,34,90,22]
-sorted_list = Selection_Sort(unsorted_list)
-print("Sorteed Elements : ",sorted_list)
-
-"""
 ########################################
 
-"""Insertion Sort
-1) first round not required as 1 element always sorted
-"""
+def bubllesort(a):
+    n = len(a);
 
-def Insertion_Sort(arr):
-    n = len(arr)
-    
-    for current in range(1 , n):
-        currentCard = arr[current]
-        correctPossition = current - 1      # It will go from i-1 to 0
+    for i in range(n):
+        for j in range(0, n-1-i):
+            if(a[j]> a[j+1]):
+                a[j],a[j+1]=a[j+1],a[j];
 
-        while correctPossition >= 0:
-            if arr[correctPossition] < currentCard:
-                break
-            else :
-                arr[correctPossition + 1] = arr[correctPossition] 
-                correctPossition -= 1
+a = [65,99,25,20,30,40,55];
+bubllesort(a);
+print(a);
 
-            arr[correctPossition + 1] = currentCard
-            
-    return arr
-
-unsorted_list = [12,25,11,34,90,22]
-sorted_list = Insertion_Sort(unsorted_list)
-print("Sorteed Elements : ",sorted_list)

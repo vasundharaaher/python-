@@ -1,6 +1,6 @@
 
 def search_dish():
-    fobj=open("dish_detail.txt","r")
+    fobj=open("./dish_detail.txt","r")
     d_list=fobj.readlines()
     fobj.close()
     fobj1=open("hotel_detail.txt","r")
@@ -20,7 +20,13 @@ def search_dish():
     
     
 def print_menu():
-    pass
+    fobj=open("./dish_detail.txt","r")
+    d_list = fobj.readlines()
+    fobj.close()
+    for d in d_list:
+        d = d.split(",")
+        print("dish name : ",d)
+    
 def order_dish():
     pass
 def add_to_wishlist():
