@@ -21,3 +21,26 @@ if r_sub == sub:
 if r_mul == mul:
     count = count + 1
 print("you got ", count, "score out of 3")
+
+
+
+# n=0.1+0.2
+# if(n == 0.3):
+#     print(True)
+
+# else:
+#     print(n)
+#     print(False)
+
+
+# rating = input()
+# if (rating>"4.5"):
+#   print('Perfection')
+# elif (rating>"4"):
+#   print('Excellent')
+# elif (rating>"3"):
+#   print('Good')
+# elif (rating>"2"):
+#   print('Fair')
+# else:
+#   print('Poor')

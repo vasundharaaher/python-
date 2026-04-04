@@ -30,7 +30,7 @@ for i in ls1 :
     i=i+1
 print(ls)
 '''
-'''
+
 ls1=[1,3,5,7,9,10]
 ls2=[2,4,6,8]
 ls3=[]
@@ -45,4 +45,3 @@ for i in ls2:
     j=j+1
     
 print(ls3)
-'''
