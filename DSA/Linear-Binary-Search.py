@@ -31,3 +31,20 @@ print(result3)
     in next phase we will only consider second half of array 
     
     middel = """
+
+def binarysearch(arr, target):
+    high = len(arr) - 1
+    left = 0
+
+    while left <= high:
+        mid = (high + left) // 2
+        if arr[mid] == target :
+            return mid
+        elif arr[mid] > target:
+            high = mid - 1
+        elif arr[mid] < target:
+            left = mid + 1
+    return -1
+
+arr = [ 1,3,5,6,8,10,12,14,16]
+print("6 is at index : ",binarysearch(arr,6))

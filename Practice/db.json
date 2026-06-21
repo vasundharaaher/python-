@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Tomato",
+    "color": "Red",
+    "price_per_kg": 30,
+    "in_stock": true
+  },
+  {
+    "id": 2,
+    "name": "Potato",
+    "color": "Brown",
+    "price_per_kg": 25,
+    "in_stock": true
+  },
+  {
+    "id": 3,
+    "name": "Carrot",
+    "color": "Orange",
+    "price_per_kg": 40,
+    "in_stock": true
+  },
+  {
+    "id": 4,
+    "name": "Spinach",
+    "color": "Green",
+    "price_per_kg": 20,
+    "in_stock": false
+  },
+  {
+    "id": 5,
+    "name": "Brinjal",
+    "color": "Purple",
+    "price_per_kg": 35,
+    "in_stock": true
+  }
+]

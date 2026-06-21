@@ -15,8 +15,7 @@ def search_dish():
             i=0
             if ls_d[1]==s_d and ls_h[0]==ls_d[0]:
                 print(" dish name ",ls_d[1]," hotel name : ",ls_h[1]," price of dish : ",ls_d[2])
-                
-    
+                    
     
     
 def print_menu():

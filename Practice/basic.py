@@ -112,3 +112,63 @@
 # ls = "".join(ls)
 # print(ls)
 
+""" Execution of generator"""
+
+def my_generator():
+    for i in range(100):
+        yield i 
+
+#### every time genrator call newlly
+# print(next(my_generator()))     # 0
+# print(next(my_generator()))     # 0
+
+#### one by one value generate
+# gen = my_generator()
+# print(next(gen))
+# print(next(gen))
+
+
+#### for all value which can generate from generator
+# gen = my_generator()
+
+# for j in gen:
+#     print(j)
+     
+
+""" Global variable"""
+""" global keyword takes refrence of globaly declared variable and make changes in it"""
+x=99
+def fun2():
+    global x
+    x = 12
+fun2()
+print(x)
+
+import time
+# i=0
+# load = time.time()
+# for i in range (5000):
+#     print(i)
+
+# thistm = time.time() - load
+# load = time.time()
+# i =0
+# while(i < 5000):
+#     i +=1
+#     print(i)
+
+# print("for loop ",thistm)
+# print ("while loop ",time.time() - load)
+
+"""" Sleep """
+# str = "Hello welcome to python"
+# ls = str.split()
+# for i in ls:
+#     time.sleep(3)
+#     print(i)
+
+""" localtime """
+
+# t = time.localtime()
+# formated_time = time.strftime("%Y-%m-%d %H:%M:%S",t)
+# print(formated_time)
